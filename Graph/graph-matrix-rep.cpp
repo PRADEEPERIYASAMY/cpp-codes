@@ -45,7 +45,7 @@ void Graph::printGraph() {
     }
 }
 
-int main() {
+int32_t main() {
     Graph graph(4);
     graph.addEdge(1,2);
     graph.addEdge(0,2);
