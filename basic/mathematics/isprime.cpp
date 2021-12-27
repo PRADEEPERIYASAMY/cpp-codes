@@ -27,7 +27,6 @@ bool isPrime(int n){
     return true;
 }
 
-
 int main() {
     
     int n = 1031;
