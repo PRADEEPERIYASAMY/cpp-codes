@@ -21,4 +21,3 @@ int main()
 	isKthBitSet(n, k); 
 	return 0; 
 }
-
