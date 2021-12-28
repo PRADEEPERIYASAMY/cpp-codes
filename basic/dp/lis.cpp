@@ -55,3 +55,4 @@ int main() {
     return 0;
 }
 
+// variation -> no of elements to be deleted to make it sorted
