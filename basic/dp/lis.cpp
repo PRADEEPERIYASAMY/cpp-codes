@@ -56,3 +56,6 @@ int main() {
 }
 
 // variation -> no of elements to be deleted to make it sorted
+// -> biatonic subsequence -> find lds(decreasing) as lis and compare both ang give max value
+// -> bulding bridge -> sort pair based on first value -> then find lis for the second value pair
+// -> longest chain pair (as a pair both are increasing compared to previous)-> sort based on first pair-> lis for second pair
