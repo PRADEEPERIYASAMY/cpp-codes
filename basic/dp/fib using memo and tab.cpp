@@ -30,4 +30,3 @@ int main() {
     cout<<fib(20);
     return 0;
 }
-
