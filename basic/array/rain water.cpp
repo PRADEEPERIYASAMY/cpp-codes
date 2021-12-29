@@ -2,6 +2,8 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
+// for navie use two loops first for fix point then proceed to calc min and max from that point then use the below formula
+
 int getWater(int arr[],int n){
     int res = 0;
     int lm[n],rm[n];
