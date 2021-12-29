@@ -3,6 +3,8 @@
 using namespace std;
 
 //dp
+// variation of coin change
+// optimized of coin change form
 int count(int n){
     int dp[n+1];
     memset(dp,0,sizeof(dp));
