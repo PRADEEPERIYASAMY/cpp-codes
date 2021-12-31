@@ -12,20 +12,19 @@ struct Node{
     }
 };
 
-void printLeft(Node *root){
+int maxLevel = 0;
+void printLeft(Node *root,int level){
     if(root == nullptr) return;
-    queue<Node *> q;
-    q.push(root);
-    while(!q.empty()){
-        int n = q.size();
-        for (int i = 0; i < n; i++) {
-            Node *temp = q.front();
-            q.pop();
-            if(i == 0) cout<<temp->key<<" ";
-            if(temp->left != nullptr) q.push(temp->left);
-            if(temp->right != nullptr) q.push(temp->right);
-        }
+    if(maxLevel<level){
+        cout<<root->key<<" ";
+        maxLevel = level;
     }
+    printLeft(root->left,level+1);
+    printLeft(root->right,level+1);
+}
+
+void printLeftView(Node *root){
+    printLeft(root,maxLevel+1);
 }
 
 int main() {
@@ -35,6 +34,6 @@ int main() {
 	root->right->left=new Node(40);
 	root->right->right=new Node(50);
 	
-	printLeft(root);
+	printLeftView(root);
 }
 
