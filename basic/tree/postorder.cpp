@@ -12,11 +12,11 @@ struct Node{
     }
 };
 
-void preorder(Node *root){
+void postorder(Node *root){
     if(root != nullptr){
+        postorder(root->left);
+        postorder(root->right);
         cout<<root->key<<" ";
-        preorder(root->left);
-        preorder(root->right);
     }
 }
 
@@ -27,7 +27,7 @@ int main() {
 	root->right->left=new Node(40);
 	root->right->right=new Node(50);
 	
-	preorder(root);
+	postorder(root);
 	
 	return 0;
 }
