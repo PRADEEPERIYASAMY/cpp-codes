@@ -8,6 +8,7 @@ void deleteNode(ListNode* node) {
     delete n;
 }
 
+
 int main(){
     //leet code solutions
     //https://leetcode.com/problems/delete-node-in-a-linked-list/
