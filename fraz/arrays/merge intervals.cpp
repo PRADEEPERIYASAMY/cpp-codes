@@ -14,7 +14,7 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
 
 int main(){
     //leet code solutions
-    //https://leetcode.com/problems/majority-element/
+    //https://leetcode.com/problems/merge-intervals/
     return 0;
 }
 
