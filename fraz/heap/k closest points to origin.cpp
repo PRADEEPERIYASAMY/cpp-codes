@@ -42,6 +42,7 @@ int partition(vector<vector<int>> &points,int left,int right){
     return p_idx;
 }
 
+
 vector<vector<int>> kClosest(vector<vector<int>>& points, int K) { // time: average O(n), worst O(n^2); space: O(K)
     int left = 0,right = points.size()-1;
     while(left<=right){
@@ -58,4 +59,5 @@ int main() {
 	// https://leetcode.com/problems/k-closest-points-to-origin/
 	return 0;
 }
+
 
