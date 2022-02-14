@@ -39,21 +39,44 @@ using namespace std;
 // }
 
 // dfs with hashmap
-vector<string> helper(const string &s,vector<string> &wordDict,unordered_map<string,vector<string>> &memo){
+// vector<string> helper(const string &s,vector<string> &wordDict,unordered_map<string,vector<string>> &memo){
+//     if(memo.count(s)) return memo[s];
+//     if(s.empty()) return {""};
+//     vector<string> res;
+//     for (auto &word : wordDict) {
+//         if(s.substr(0,word.size()) != word) continue;
+//         vector<string> next = helper(s.substr(word.size()),wordDict,memo);
+//         for (auto &str : next) res.emplace_back(word+(str.empty()?"":" ")+str);
+//     }
+//     return memo[s] = res;
+// }
+
+// vector<string> wordBreak(string s, vector<string>& wordDict) {
+//     unordered_map<string,vector<string>> memo;
+//     return helper(s,wordDict,memo);
+// }
+
+// backtracking
+vector<string> backtracking(string s,unordered_set<string> &dict,unordered_map<string,vector<string>> &memo){
     if(memo.count(s)) return memo[s];
-    if(s.empty()) return {""};
     vector<string> res;
-    for (auto &word : wordDict) {
-        if(s.substr(0,word.size()) != word) continue;
-        vector<string> next = helper(s.substr(word.size()),wordDict,memo);
-        for (auto &str : next) res.emplace_back(word+(str.empty()?"":" ")+str);
+    for (int pos = s.size()-1; pos>= 0; pos--) {
+        string word = s.substr(pos);
+        if(dict.count(word)){
+            if(pos == 0) res.push_back(word);
+            else {
+                vector<string> pev = backtracking(s.substr(0,pos),dict,memo);
+                for (auto &str : pev) res.push_back(str+" "+word);
+            }
+        }
     }
     return memo[s] = res;
 }
 
 vector<string> wordBreak(string s, vector<string>& wordDict) {
+    unordered_set<string> dict(wordDict.begin(),wordDict.end());
     unordered_map<string,vector<string>> memo;
-    return helper(s,wordDict,memo);
+    return backtracking(s,dict,memo);
 }
 
 int main() {
