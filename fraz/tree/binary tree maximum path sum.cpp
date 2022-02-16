@@ -5,7 +5,7 @@ int helper(TreeNode* root,int &res){
     if(!root) return 0;
     int left = max(0,helper(root->left,res));
     int right = max(0,helper(root->right,res));
-    res = max(res,left+root->val+right)
+    res = max(res,left+root->val+right);
     return max(left,right)+root->val;
 }
 
