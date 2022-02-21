@@ -24,6 +24,7 @@ void search(string pat,string txt){
     if(compare(countp,countt)) cout<<"found at index "<<(n - m)<<"\n";
 }
 
+
 int main() {
 	// pepcoding
 	// https://www.geeksforgeeks.org/anagram-substring-search-search-permutations/
