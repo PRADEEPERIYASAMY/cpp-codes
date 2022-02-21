@@ -21,7 +21,7 @@ int maxLengthNonPalinSubstring(string str){
 
 int main() {
 	// pepcoding
-	// https://www.geeksforgeeks.org/lexicographically-first-palindromic-string/
+	// https://www.geeksforgeeks.org/longest-non-palindromic-substring/
 	string str = "abba";
     cout << "Maximum length = "<< maxLengthNonPalinSubstring(str);
     return 0;
