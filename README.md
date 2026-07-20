@@ -59,7 +59,7 @@ window, two-pointer, backtracking, greedy, hash tables, heaps — reflecting a s
 toward pattern-recognition-based problem solving (closer to how interview prep is 
 typically structured today).
 
-## 📁 Repository Structure
+## Repository Structure
 
 | Folder | Focus |
 |---|---|
@@ -70,7 +70,7 @@ typically structured today).
 | `codechef/` | Competitive programming practice from CodeChef |
 | `practice/` | General ad-hoc practice (arrays, queues, stacks) |
 
-## 📍 Current Practice — Timeline & Transition
+## Current Practice — Timeline & Transition
 
 This repository reflects my **earliest, foundational DSA practice** (2022) — solving 
 problems in C++ and periodically committing progress here as I worked through topics 
